@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--referencing stylesheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 <!--webpage of our favorite dog breeds and information on them to show our love for them :)-->
     <title>HTML webpage of dog breeds</title>
     <!--embedded style sheet (maya)-->
     <style>
+      /*adding scroll effect*/
+html{
+  scroll-behavior: smooth;
+}
       /*using id span to add color to text (maya)*/ /*Mark's comment: try not to use the a name that is the name of an element! so rename span to something else. Oh and I see that you've done this for table, img, and h2 also! rename those, too.*/
       #affectionate{
         color:#FF4500;
@@ -13,8 +22,7 @@
       /*adding background color, margin and padding values, and font style to corgi div (maya)*/
       .corgi{
         background-color:beige;
-        margin:70px;
-        padding:20px;
+        
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
       /*adding font-style, border properties, and alignment to table (maya)*/
@@ -37,7 +45,67 @@
         padding:20px;
         text-align: center;
       }
+    /*nav bar styling*/
+    .navbar{
+    position: fixed;
+    width: 100%;
 
+
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.navbar .logo a{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    padding:20px;
+}
+
+.navbar.sticky .logo a{
+    color: #fff;
+}
+/*.navbar.sticky .logo a span{
+    color:#A882DA;
+    transition: all 0.3s ease;
+} */
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+
+}
+.navbar .menu li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+
+}
+.navbar .menu li a:hover{
+    color:grey;
+
+}
+.navbar.sticky .menu li a{
+    color:#fff;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .menu li a:hover{
+    color:#2A1545;
+    transition: all 0.3s ease;
+}
+a{
+  text-decoration:none;
+}
+#tableheader{
+text-align: center;
+}
     </style>
 <html lang="en">
   <head>
@@ -55,13 +123,40 @@
 
     </head>  
     <body>
+      <!--navbar to navigate to different sections of the page-->
+      <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="maxwidth">
+        <div class="navbarheader">
+      <a class="navbar-brand" href="#"> DOG BREEDS</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#corgi">Corgis</a></li>
+          <li><a href="#dobermans">Dobermans</a></li>
+          <li><a href="#pug">Pugs</a></li>
+          <li><a href="#germanshepherd">German Shepherds</a></li>
+        </ul>
+        </div>
+    </nav>-->
+    <nav class="navbar bg-dark">
+      <div class="max-width">
+          <div class="logo"><a href="#"><span>Dog Breeds</span></a></div>
+           <ul class="menu">
+        <li><a href="#corgi">Corgis</a></li>
+        <li><a href="#dobermans">Dobermans</a></li>
+        <li><a href="#pug">Pugs</a></li>
+        <li><a href="#germanshepherd">German Shepherds</a></li>
+      </ul>
+      </div>
+  </nav>
+
 <!--div for corgi dog breed (maya)-->
-<div class="corgi">
+<div class="corgi" id="corgi">
 <!--header to name dog breed (maya)-->    
     <h2 id="corg">Pembroke Welsh Corgi</h2>
 <!--img of corgi + anchor tag linking to site with info on corgis (maya)-->    
     <a href="https://www.akc.org/dog-breeds/pembroke-welsh-corgi/"><img src="https://www.thefarmersdog.com/digest/wp-content/uploads/2021/12/corgi-top-1400x871.jpg" alt="corgi" title="corgi" id="photo" width="50%"></a><!--Mark's comment: you have an id attribute in the img element, but no corresponding #img style. There is a .img style which specifies a class not id, but also don't name classes and ids after tag names. Did you all read the first few entries for CSS on w3schools? You should. This one in particular may help clarify: https://www.w3schools.com/css/css_selectors.asp-->
 <!--paragraph description of corgi (maya)-->   
+<h2 id="corg">Pembroke Welsh Corgi</h2>
     <p id="para">Corgis are <span id="affectionate">affectionate, cute, and friendly</span> dogs that have strong athletic capabilities. 
         They weigh 27 to 30 pounds and come in a range of colors from red, sable, fawn, black, 
         tan, and white. </p> 
@@ -88,7 +183,7 @@
     </ol>
  
     <!--table of info on how to care for corgis (maya)-->
-    <h2>Corgi Care</h2>
+    <h2 id="tableheader">Corgi Care</h2>
     <table id="care">
         <tr>
           <th>Health</th>
@@ -128,9 +223,10 @@ body{
   background-color: darkseagreen;    
   text-align: center;
 }
-a:hover {
+/*can someone make this hover tag more specific, its affecting other anchor tags*/
+/*a:hover {
   background-color: pink;
-}
+}*/
 h2.b {
   visibility: hidden;
 }
@@ -182,7 +278,7 @@ img {
         <div class="container mt-3">
           <div class="p-2 bg-info">
   
-       <div class="center"><h2>Dobermans
+       <div class="center" id="dobermans"><h2>Dobermans
             <link rel="stylesheet" href="Style.css"><!--Mark's comment: put link tags into the head tag up top. But also, there does not appear to be a file named Style.css within your folder so this links to nothing.-->
         </h2></div>
         <img src="https://media-be.chewy.com/wp-content/uploads/2021/06/02102805/Doberman-Pinscher_Featured-Image-1024x615.jpg" alt="Big dog" title="Cute Doggo!" width="50%">
@@ -260,7 +356,7 @@ equal the height. The length of head, neck and legs should be porportionate to t
       </body>
 
  <!--div for pug dog breed (Alex)-->
- <div class="Pug">
+ <div class="Pug" id="pug">
   <style>
 /*.Pug allows for both the image and text to be in a nice and organized manner in a similar and coehsive manner to Maya*/
     .Pug {
@@ -327,7 +423,7 @@ equal the height. The length of head, neck and legs should be porportionate to t
     <div class="container mt-3">
       <div class="p-2 bg-info">
     <!--header to name dog breed (Alex)-->
-    <h2>Pug</h2>
+    <h2 id="pugsec">Pug</h2>
     <!--img of pug (Alex)-->
     <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Mops_oct09_cropped2.jpg" alt="pug" title="Pug" width="50%">
     <!--paragraph description of pug (Alex)-->
@@ -432,7 +528,7 @@ equal the height. The length of head, neck and legs should be porportionate to t
       <div class="p-2 bg-info">
 
     <!--A divider for the German Shepherd section (Ashton P.)-->
-  <div class="GermanShepherd">
+  <div class="GermanShepherd" id="germanshepherd">
     <!--Header for the German Shepherd section (Ashton P.)-->
     <h2 id="h2CSS">German Shepherd</h2>
     <!--Image of a german shepherd with a new measurement and a title, with alt text in case the image doesn't load, also including a source for the information if you click on the image (Ashton P.)-->
