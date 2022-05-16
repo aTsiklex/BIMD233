@@ -121,7 +121,7 @@ text-align: center;
     <div class="container mt-3">
       <div class="p-2 bg-info">
 
-    </head>  
+    </head>  <!--Mark's comment 5/15: Each web document should only have ONE html, head, title, and body tag. It looks like you have TWO html, head, and body tags, probably an error from copy-paste. Please delete the duplicates.-->
     <body>
       <!--navbar to navigate to different sections of the page-->
       <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -150,7 +150,7 @@ text-align: center;
   </nav>
 
 <!--div for corgi dog breed (maya)-->
-<div class="corgi" id="corgi">
+<div class="corgi" id="corgi"> <!--Mark's comment 5/15: Try not to have classes and ids use the same word. It's confusing. But, also, you're using the id here for the anchor tag in the navbar. That's fine, but I think I'd name it something like anchor-corgi so it's clear what you're using it for.-->
 <!--header to name dog breed (maya)-->    
     <h2 id="corg">Pembroke Welsh Corgi</h2>
 <!--img of corgi + anchor tag linking to site with info on corgis (maya)-->    
@@ -183,7 +183,7 @@ text-align: center;
     </ol>
  
     <!--table of info on how to care for corgis (maya)-->
-    <h2 id="tableheader">Corgi Care</h2>
+    <h2 id="tableheader">Corgi Care</h2> <!--Mark's comment 5/15: Use classes for general styling of different sections and id for very specific sections, generally if you're going to refer to those sections with code like Javascript coming up.-->
     <table id="care">
         <tr>
           <th>Health</th>
@@ -200,7 +200,7 @@ text-align: center;
     </div>
 
 </div>
-</body>
+</body><!--Mark's comment 5/15: see my previous comments about html, head, and body tags! Also, for the style block on line 207, I expect you to make changes based on my comments!-->
 </html>
 
     <body>
@@ -279,7 +279,7 @@ img {
           <div class="p-2 bg-info">
   
        <div class="center" id="dobermans"><h2>Dobermans
-            <link rel="stylesheet" href="Style.css"><!--Mark's comment: put link tags into the head tag up top. But also, there does not appear to be a file named Style.css within your folder so this links to nothing.-->
+            <link rel="stylesheet" href="Style.css"><!--Mark's comment: put link tags into the head tag up top. But also, there does not appear to be a file named Style.css within your folder so this links to nothing.--><!--Mark's comment 5/15: You all didn't read my comments from before, did you?-->
         </h2></div>
         <img src="https://media-be.chewy.com/wp-content/uploads/2021/06/02102805/Doberman-Pinscher_Featured-Image-1024x615.jpg" alt="Big dog" title="Cute Doggo!" width="50%">
 <p class="center"><strong>The Dobermann or also known as the Doberman Pinscher is a medium to large sized dog that was discovered 
@@ -356,7 +356,7 @@ equal the height. The length of head, neck and legs should be porportionate to t
       </body>
 
  <!--div for pug dog breed (Alex)-->
- <div class="Pug" id="pug">
+ <div class="Pug" id="pug"><!--Mark's comment 5/15: I stopped reviewing after seeing yet another style block, followed by another html tag...-->
   <style>
 /*.Pug allows for both the image and text to be in a nice and organized manner in a similar and coehsive manner to Maya*/
     .Pug {
